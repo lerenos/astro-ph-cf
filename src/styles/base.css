@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html {
+    @apply antialiased scroll-smooth text-base-content
+  }
+
+  /* Heading defaults */
+
+  h1, h2, h3, h4 {
+    @apply font-bold text-base-heading
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  h2 {
+    @apply  text-2xl md:text-3xl;
+  }
+  h3 {
+    @apply  text-lg md:text-2xl;
+  }
+  h4 {
+    @apply  text-base lg:text-lg;
+  }
+
+  b, strong {
+    @apply font-medium
+  }
+}
+
+@layer components {
+  /* Container */
+  .container {
+    @apply mx-auto px-4 py-8 md:p-8 gap-4 md:gap-8 rounded-box max-w-screen-xl /* max-w-screen-xl - if we want to make it more narrow and stop at 1440px screen (container 1280) */
+  }
+  /* Grid */
+  .our-grid{
+    @apply grid gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-3
+  }
+
+  /* Buttons  */
+  .btn {
+    @apply inline-block w-fit rounded-btn px-6 py-2 lg:py-3 font-medium focus:outline-offset-4 transition duration-300 ease-in-out active:scale-95
+    /* font-semibold uppercase focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 */
+  }
+  .btn.bg-primary {
+    @apply text-primary-content focus:outline-primary hover:bg-primary-600 focus-visible:ring-primary-600 
+  }
+  .btn.bg-accent {
+    @apply text-accent-content focus:outline-accent hover:bg-accent-600 focus-visible:ring-accent-600
+  }
+
+
+  /* Utility for anchor tags. By default, they are not styled. */
+  .text-link {
+    @apply font-medium text-primary underline
+  }
+  /* For a small span of code */
+  .code-inline {
+    @apply bg-bg-neutral px-1 rounded-sm select-all
+  }
+
+}
+
+
+@layer utilities {
+  .animation-pause{
+    animation-play-state:paused
+  }
+
+}

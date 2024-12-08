@@ -1,0 +1,26 @@
+---
+let faq = [
+    {q: "Question?", a: "Answer"}
+]
+
+let faqSchemaArray = []
+faq.map(item =>
+  faqSchemaArray.push({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  })
+)
+let faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqSchemaArray
+}
+
+
+const { data = faq } = Astro.props
+---
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
