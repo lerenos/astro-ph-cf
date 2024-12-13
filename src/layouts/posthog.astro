@@ -2,7 +2,7 @@
 import { PUBLIC_PH_KEY } from 'astro:env/client'
 const SITE = import.meta.env.DEV ? "http://localhost:4321" : import.meta.env.SITE
 
-if(PUBLIC_PH_KEY){
+if(!PUBLIC_PH_KEY){
     console.warn('NO POSTHOG KEY SET. Please set PUBLIC_PH_KEY on the .env file' )
 }
 
