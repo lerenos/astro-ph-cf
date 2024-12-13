@@ -46,10 +46,10 @@ export default {
 			  ...customColors.error,
 			},
 			base: {
-				bg: 'white',
 				content: customColors.neutral[700],
 				heading: customColors.neutral[800],
-				
+				bg: 'white',
+	
 				alt: customColors.primary[50],
 				dark: customColors.primary[900],
 				
