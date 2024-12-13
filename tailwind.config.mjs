@@ -7,16 +7,6 @@ delete colors.trueGray;
 delete colors.coolGray;
 delete colors.blueGray;
 
-
-/* Harmony: Compound
-#F5405E rose-500
-#E440F5 ~fuchsia-500
-#40F5C8 ~teal-300
-#40F562 ~green-400
-*/
-// Compound - teal-300, green-400, orange-400, red-500
-/* Split Complementary: emerald, orange, red */
-
 // Color pallete reference here: https://tailwindcss.com/docs/customizing-colors
 let customColors = {
 	primary: colors.rose,
