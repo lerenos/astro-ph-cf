@@ -1,4 +1,4 @@
-# Astro + PostHog + Cloudflare Pages 
+# Astro 5 + Tailwind 4 + PostHog + Cloudflare Pages 
 
 ## Motivation
 This is a starter template to meet the following requitements:
@@ -34,14 +34,13 @@ A no-framework approach, for example, is to use the [Web Components Standard.](h
 
 For sharing state between components, [Astro's Nano stores](https://docs.astro.build/en/recipes/sharing-state-islands/#why-nano-stores) is a good solution.
 
-When things get a little more complex, I like to use Alpine or Vue.
+When things get a little more complex, I like to use Vue or Alpine.
 
-But if you're more a React person, of course you can use it, but I would advise you to check other interesting solutions before starting here:
+But if you're more a React person, of course you can use this template, but I would advise you to also check other interesting solutions before starting here:
 - [Fresh/Deno](https://fresh.deno.dev/)
 - Next.js/Vercel
 
-If you're going to add some framework integration, always watchout the size of the bundle these things add to your cleint-side result, so it doesn't hurt the performance. (React is notorious for this.)
-
+If you're going to add some framework integration, always watch the size of the bundle these things add to your cleint-side result, so it doesn't hurt the performance. (React is notorious for this downside.)
 
 ## Tailwind Component Libraries
 Why reinvent the wheel?
@@ -54,7 +53,7 @@ Why reinvent the wheel?
 [Tailkit Free](https://tailkit.com/free-tailwind-components) - yes, it is different from the one above, but almost the same name.
 
 ### Requires Installation
-[DaisyUI](https://daisyui.com/) - has several themes (nice), but it is not compatible yet with the colors defined at the config file.
+[DaisyUI](https://daisyui.com/) - has several themes (nice) and components. It is already installed here.
 [Preline](https://preline.co/)
 
 ### Paid
@@ -86,7 +85,7 @@ It is not meant to be used, but I'll keep here just as a reference for how thing
 ### 1. Install Packages
 
 ```sh
-npm create cloudflare@latest -- my-astro-app --framework=astro
+npm create cloudflare@latest -- choose-your-dir-name --framework=astro
 
 npx astro add tailwind
 npx astro add mdx
@@ -101,6 +100,7 @@ After this initial commands, I made some customizations in...
 - Created the Head component with many SEO metatags
 - Middleware for Posthog reverse proxy
 - Posthog script component
+
 - Tailwind: created a custom base.css
 - Tailwind: many modifications in tailwind.config.mjs, semantic colors
 
