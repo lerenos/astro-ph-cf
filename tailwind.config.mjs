@@ -1,64 +1,64 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require("tailwindcss/colors");
-delete colors.lightBlue;
-delete colors.warmGray;
-delete colors.trueGray;
-delete colors.coolGray;
-delete colors.blueGray;
+// const colors = require("tailwindcss/colors");
+// delete colors.lightBlue;
+// delete colors.warmGray;
+// delete colors.trueGray;
+// delete colors.coolGray;
+// delete colors.blueGray;
 
-// Color pallete reference here: https://tailwindcss.com/docs/customizing-colors
-let customColors = {
-	primary: colors.rose,
-	secondary: colors.teal,
-	accent: colors.orange,
-	success: colors.red,
-	error: colors.green,
+// // Color pallete reference here: https://tailwindcss.com/docs/customizing-colors
+// let customColors = {
+// 	primary: colors.rose,
+// 	secondary: colors.teal,
+// 	accent: colors.orange,
+// 	success: colors.red,
+// 	error: colors.green,
 
-	neutral: colors.gray,
-}
+// 	neutral: colors.gray,
+// }
 
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	darkMode: "class",
-	theme: {
-		colors: {
-			...colors,
-			primary:{
-				DEFAULT: customColors.primary[500],
-	    		content: 'white',
-			  	...customColors.primary,
-			},
-			accent:{
-				DEFAULT: customColors.accent[500],
-	    		content: 'white',
-			  	...customColors.accent,
-			},
-			success: {
-				DEFAULT: customColors.success[500],
-				content: 'white',
-				...customColors.success,
-			},
-			error: {
-			  DEFAULT: customColors.error[500],
-			  content: 'white',
-			  ...customColors.error,
-			},
-			base: {
-				content: customColors.neutral[700],
-				heading: customColors.neutral[800],
-				bg: 'white',
+	// theme: {
+	// 	colors: {
+	// 		...colors,
+	// 		primary:{
+	// 			DEFAULT: customColors.primary[500],
+	//     		content: 'white',
+	// 		  	...customColors.primary,
+	// 		},
+	// 		accent:{
+	// 			DEFAULT: customColors.accent[500],
+	//     		content: 'white',
+	// 		  	...customColors.accent,
+	// 		},
+	// 		success: {
+	// 			DEFAULT: customColors.success[500],
+	// 			content: 'white',
+	// 			...customColors.success,
+	// 		},
+	// 		error: {
+	// 		  DEFAULT: customColors.error[500],
+	// 		  content: 'white',
+	// 		  ...customColors.error,
+	// 		},
+	// 		base: {
+	// 			content: customColors.neutral[700],
+	// 			heading: customColors.neutral[800],
+	// 			bg: 'white',
 	
-				alt: customColors.primary[50],
-				dark: customColors.primary[900],
+	// 			alt: customColors.primary[50],
+	// 			dark: customColors.primary[900],
 				
-				primary: customColors.primary[50],
-				accent: customColors.accent[50],
-				success: customColors.success[50],
-				error: customColors.error[50],
-			},
-		},
+	// 			primary: customColors.primary[50],
+	// 			accent: customColors.accent[50],
+	// 			success: customColors.success[50],
+	// 			error: customColors.error[50],
+	// 		},
+	// 	},
 		extend: {
 			borderRadius:{
 				btn: '0.5rem',
