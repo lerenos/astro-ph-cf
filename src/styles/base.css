@@ -1,9 +1,86 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "daisyui";
+
+@custom-variant dark (&:where(.dark, .dark *,[data-theme=night], [data-theme=night] *));
+
+/* Custom themes. View all the options at https://v5.daisyui.com/docs/themes/#-2 */
+@plugin "daisyui/theme" {
+  name: "light";
+  --color-heading: var(--color-red-900);
+  --radius-img: 1rem;
+}
+@plugin "daisyui/theme" {
+  name: "dark";
+  --color-heading: var(--color-white);
+  --radius-img: 1rem;
+}
+
+@theme {
+
+  --color-base-heading: var(--color-heading);
+  --radius-img: var(--radius-img);
+
+  /* 
+  --color-bg:--color-white;
+  --color-bg-alt: --color-gray-50;
+  --color-bg-contrast: --color-gray-900;
+  */ 
+ 
+  --animate-in-by-left: in-by-left 2s ease-out;
+  --animate-in-by-right: in-by-right 2s ease-out;
+  --animate-fade-in: fade-in 2s ease-out;
+  --animate-floating: floating 3s ease-in-out infinite;
+  --animate-floating-shadow: floating-shadow 3s ease-in-out infinite;
+
+  @keyframes in-by-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes in-by-right {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes floating {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10%);
+    }
+  }
+  @keyframes floating-shadow {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+      box-shadow: 0 20px 20px 1px rgba(0, 0, 0, 0.7);
+    }
+    50% {
+      transform: scale(0.8);
+      opacity: 0.5;
+      box-shadow: 0 20px 20px 1px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
 
 @layer base {
-
   html {
     @apply antialiased scroll-smooth text-base-content
   }
@@ -30,46 +107,48 @@
   b, strong {
     @apply font-medium
   }
+
+  /*
+    The default border color has changed to `currentColor` in Tailwind CSS v4,
+    so we've added these compatibility styles to make sure everything still
+    looks the same as it did with Tailwind CSS v3.
+  
+    If we ever want to remove these styles, we need to add an explicit border
+    color utility to any element that depends on these defaults.
+  */
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
 }
 
-@layer components {
+@utility animation-pause {
+  animation-play-state: paused;
+}
+
+@utility container {
   /* Container */
-  .container {
-    @apply mx-auto px-4 py-8 md:p-8 gap-4 md:gap-8 rounded-box max-w-screen-xl /* max-w-screen-xl - if we want to make it more narrow and stop at 1440px screen (container 1280) */
-  }
+  @apply mx-auto px-4 py-8 md:p-8 gap-4 md:gap-8 rounded-box max-w-(--breakpoint-xl) /* max-w-screen-xl - if we want to make it more narrow and stop at 1440px screen (container 1280) */;
+}
+
+@utility our-grid {
   /* Grid */
-  .our-grid{
-    @apply grid gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-3
-  }
-
-  /* Buttons  */
-  .btn {
-    @apply inline-block w-fit rounded-btn px-6 py-2 lg:py-3 font-medium focus:outline-offset-4 transition duration-300 ease-in-out active:scale-95
-    /* font-semibold uppercase focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 */
-  }
-  .btn.bg-primary {
-    @apply text-primary-content focus:outline-primary hover:bg-primary-600 focus-visible:ring-primary-600 
-  }
-  .btn.bg-accent {
-    @apply text-accent-content focus:outline-accent hover:bg-accent-600 focus-visible:ring-accent-600
-  }
-
-
-  /* Utility for anchor tags. By default, they are not styled. */
-  .text-link {
-    @apply font-medium text-primary underline
-  }
-  /* For a small span of code */
-  .code-inline {
-    @apply bg-bg-neutral px-1 rounded-sm select-all
-  }
-
+  @apply grid gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-3;
 }
 
-
-@layer utilities {
-  .animation-pause{
-    animation-play-state:paused
+/* Buttons  */
+/*
+@utility btn {
+  @apply inline-block w-fit rounded-btn px-6 py-2 lg:py-3 font-medium focus:outline-offset-4 transition duration-300 ease-in-out active:scale-95;
+  &.bg-primary {
+    @apply text-primary-content focus:outline-primary hover:bg-primary-600 focus-visible:ring-primary-600;
   }
-
+  &.bg-accent {
+    @apply text-accent-content focus:outline-accent hover:bg-accent-600 focus-visible:ring-accent-600;
+  }
 }
+*/

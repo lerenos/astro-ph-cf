@@ -13,12 +13,15 @@
     "@astrojs/cloudflare": "^12.2.1",
     "@astrojs/mdx": "^4.0.8",
     "@astrojs/sitemap": "^3.2.1",
+    "@tailwindcss/vite": "^4.0.6",
     "astro": "^5.2.1",
     "notion-astro-loader": "^0.3.0",
+    "tailwindcss": "^4.0.0",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241202.0",
+    "daisyui": "^5.0.0-beta.8",
     "wrangler": "^3.92.0"
   }
 }

@@ -11,14 +11,15 @@ This is a starter template to meet the following requitements:
 
 To achieve this, we will use:
 
-- Posthog for Analytics and Sending Events to Meta and Google Ads - Goodbye to GA4 👋.
+- Posthog - for Analytics and Sending Events to Meta and Google Ads - Goodbye to GA4 👋.
 - Cloudflare Pages - CF Pages is a CI/CD solution, alternative to Vercel/Netlify
 - Cloudflare Zaraz - This is a serverless Edge Service that allows you to add 3rd party scripts to your website, thus substituting the need of using Google Tag Manager (or the expensive sGTM solution). If PostHog works good to send data to Meta and GAds, we're not going to need this for now (but it is cool to have this option on the table). 
 
 ## Other Techs Here
-- Astro - The framework used to build the website.
-- TailwindCSS - For styling
+- Astro - The framework used to build the website (Not a JS framework, like react or Vue, but a Site Generator framework).
 - notion-astro-loader - Notion loader for the Astro Content Layer
+- TailwindCSS - For styling
+- DaisyUI - A Tailwind Component Library
 
 ## Pricing
 PostHog is free until 1 million events per month.
@@ -36,7 +37,7 @@ For sharing state between components, [Astro's Nano stores](https://docs.astro.b
 
 When things get a little more complex, I like to use Vue or Alpine.
 
-But if you're more a React person, of course you can use this template, but I would advise you to also check other interesting solutions before starting here:
+But if you're more a React person, of course you can use this template, but I would advise you to ~stop using react~ also check other interesting solutions before starting here:
 - [Fresh/Deno](https://fresh.deno.dev/)
 - Next.js/Vercel
 

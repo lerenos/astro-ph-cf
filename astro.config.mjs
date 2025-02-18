@@ -2,12 +2,13 @@
 import { defineConfig, envField } from 'astro/config';
 
 import cloudflare from '@astrojs/cloudflare';
+import tailwindcss from "@tailwindcss/vite";
+
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-
   site: "https://your-domain.com",
   env: {
     schema: {
@@ -24,11 +25,9 @@ export default defineConfig({
     }
   }),
 
-  integrations: [
-  // tailwind({
-  //   // Example: Disable injecting a basic `base.css` import on every page.
-  //   // Useful if you need to define and/or import your own custom `base.css`.
-  //   applyBaseStyles: false,
-  // }), 
-  mdx(), sitemap()]
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  integrations: [mdx(), sitemap()]
 });
