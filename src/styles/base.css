@@ -6,11 +6,14 @@
 /* Custom themes. View all the options at https://v5.daisyui.com/docs/themes/#-2 */
 @plugin "daisyui/theme" {
   name: "light";
-  --color-heading: var(--color-red-900);
+  default: true;
+  --color-heading: var(--color-gray-900);
   --radius-img: 1rem;
 }
 @plugin "daisyui/theme" {
   name: "dark";
+  prefersdark: true;
+  color-scheme: dark;
   --color-heading: var(--color-white);
   --radius-img: 1rem;
 }
@@ -82,7 +85,7 @@
 
 @layer base {
   html {
-    @apply antialiased scroll-smooth text-base-content
+    @apply antialiased scroll-smooth
   }
 
   /* Heading defaults */
