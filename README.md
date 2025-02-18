@@ -88,11 +88,12 @@ It is not meant to be used, but I'll keep here just as a reference for how thing
 ```sh
 npm create cloudflare@latest -- choose-your-dir-name --framework=astro
 
-npx astro add tailwind
 npx astro add mdx
 npx astro add sitemap
-
 npm i notion-astro-loader
+
+npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@beta
+
 ```
 ### 2. Project Customizations
 After this initial commands, I made some customizations in...
@@ -102,8 +103,7 @@ After this initial commands, I made some customizations in...
 - Middleware for Posthog reverse proxy
 - Posthog script component
 
-- Tailwind: created a custom base.css
-- Tailwind: many modifications in tailwind.config.mjs, semantic colors
+- Tailwind: modifications in base.css
 
 ## Cool Resources
 
