@@ -37,9 +37,10 @@ For sharing state between components, [Astro's Nano stores](https://docs.astro.b
 
 When things get a little more complex, I like to use Vue or Alpine.
 
-But if you're more a React person, of course you can use this template, but I would advise you to ~stop using react~ also check other interesting solutions before starting here:
+But if you're more a React person, of course you can use this template, but I would advise you to also check other interesting solutions before starting here:
 - [Fresh/Deno](https://fresh.deno.dev/)
 - Next.js/Vercel
+- ~stop using react~
 
 If you're going to add some framework integration, always watch the size of the bundle these things add to your cleint-side result, so it doesn't hurt the performance. (React is notorious for this downside.)
 
@@ -47,22 +48,31 @@ If you're going to add some framework integration, always watch the size of the 
 Why reinvent the wheel?
 
 ### No installation (just copy and paste to create your own)
-[Meraki UI](https://merakiui.com/components#marketing)
-[Sailboat](https://sailboatui.com/) - Uses semantic colors (primary and secondary), uses alpine for some components.
-[HyperUI](https://www.hyperui.dev/)
-[Tail-kit](https://www.tailwind-kit.com/components#pagesection) - has an interesting live editor
-[Tailkit Free](https://tailkit.com/free-tailwind-components) - yes, it is different from the one above, but almost the same name.
+- [Meraki UI](https://merakiui.com/components#marketing)
+- [Sailboat](https://sailboatui.com/) - Uses semantic colors (primary and secondary), uses alpine for some components.
+- [HyperUI](https://www.hyperui.dev/)
+- [Tail-kit](https://www.tailwind-kit.com/components#pagesection) - has an interesting live editor
+- [Tailkit Free](https://tailkit.com/free-tailwind-components) - yes, it is different from the one above, but almost the same name.
 
 ### Requires Installation
-[DaisyUI](https://daisyui.com/) - has several themes (nice) and components. It is already installed here.
-[Preline](https://preline.co/)
+- [DaisyUI](https://daisyui.com/) - has several themes (nice) and components. It is already installed here.
+- [Preline](https://preline.co/)
 
 ### Paid
-[Tailwind UI](https://tailwindui.com/) - The official UI kit.
+- [Tailwind UI](https://tailwindui.com/) - The official UI kit.
 
 ### Very Interesting: This is an online editor for Tailwind, with many components and layouts
-[Windframe](https://windframe.devwares.com/)
+- [Windframe](https://windframe.devwares.com/)
 
+## Dark Mode
+
+You can manipulate it by calling these js functions:
+
+- setLightMode()
+- setDarkMode()
+- respectOSPreference()
+
+You can see the logic at `src/layouts/scripts/darkMode.astro`
 
 ## 🧞 Commands
 
@@ -102,8 +112,7 @@ After this initial commands, I made some customizations in...
 - Created the Head component with many SEO metatags
 - Middleware for Posthog reverse proxy
 - Posthog script component
-
-- Tailwind: modifications in base.css
+- Tailwind: modifications in base.css, such as the DaisyUI installation and dark theme configuration. 
 
 ## Cool Resources
 

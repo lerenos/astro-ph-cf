@@ -1,34 +1,38 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@custom-variant dark (&:where(.dark, .dark *,[data-theme=night], [data-theme=night] *));
+@custom-variant dark (&:where(.dark, .dark *,[data-theme=dark], [data-theme=dark] *));
 
 /* Custom themes. View all the options at https://v5.daisyui.com/docs/themes/#-2 */
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  --color-heading: var(--color-gray-900);
-  --radius-img: 1rem;
+
+  --var-color-base-heading: var(--color-gray-900);
+  --var-radius-img: 1rem;
 }
 @plugin "daisyui/theme" {
   name: "dark";
   prefersdark: true;
   color-scheme: dark;
-  --color-heading: var(--color-white);
-  --radius-img: 1rem;
+
+  --var-color-base-heading: var(--color-white);
+  --var-radius-img: 1rem;
+}
+
+@theme inline {
+  --color-base-heading: var(--var-color-base-heading,var(--color-base-content));
+  --radius-img: var(--var-radius-img, var(--radius-box));
+  /* 
+  --color-bg: var(--var-color-bg) ;
+  --color-bg-alt: var(--var-color-bg-alt) ;
+  --color-bg-contrast: var(--var-color-bg-contrast) ;
+  */ 
 }
 
 @theme {
+  /* Common to all themes */
 
-  --color-base-heading: var(--color-heading);
-  --radius-img: var(--radius-img);
-
-  /* 
-  --color-bg:--color-white;
-  --color-bg-alt: --color-gray-50;
-  --color-bg-contrast: --color-gray-900;
-  */ 
- 
   --animate-in-by-left: in-by-left 2s ease-out;
   --animate-in-by-right: in-by-right 2s ease-out;
   --animate-fade-in: fade-in 2s ease-out;
@@ -135,7 +139,7 @@
 
 @utility container {
   /* Container */
-  @apply mx-auto px-4 py-8 md:p-8 gap-4 md:gap-8 rounded-box max-w-(--breakpoint-xl) /* max-w-screen-xl - if we want to make it more narrow and stop at 1440px screen (container 1280) */;
+  @apply mx-auto px-4 py-8 md:p-8 gap-4 md:gap-8 max-w-(--breakpoint-xl) /* max-w-screen-xl - if we want to make it more narrow and stop at 1440px screen (container 1280) */;
 }
 
 @utility our-grid {

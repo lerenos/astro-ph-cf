@@ -1,6 +1,7 @@
 ---
 import '@/styles/base.css'
-import Posthog from "./posthog.astro";
+import Posthog from "./scripts/posthog.astro";
+import DarkMode from './scripts/darkMode.astro';
 
 const siteName = import.meta.env.SITE_NAME
 
@@ -63,7 +64,7 @@ if (noindex){
 
 <script>
 //Script to forward query strings to all the links on the page
-document.addEventListener('astro:page-load', () =>{
+document.addEventListener('DOMContentLoaded', () =>{
   if (window.location.search){
     const newParams = new URLSearchParams(window.location.search)
     document.querySelectorAll("a").forEach(item => {
@@ -87,3 +88,5 @@ document.addEventListener('astro:page-load', () =>{
 </script>
 
 <Posthog />
+
+<DarkMode />
