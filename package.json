@@ -13,6 +13,7 @@
     "@astrojs/cloudflare": "^12.2.1",
     "@astrojs/mdx": "^4.0.8",
     "@astrojs/sitemap": "^3.2.1",
+    "@playform/inline": "^0.1.1",
     "@tailwindcss/vite": "^4.0.6",
     "astro": "^5.2.1",
     "notion-astro-loader": "^0.3.0",

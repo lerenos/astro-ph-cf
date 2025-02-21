@@ -7,6 +7,8 @@ import sitemap from '@astrojs/sitemap';
 
 import tailwindcss from "@tailwindcss/vite";
 
+import playformInline from "@playform/inline";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://your-domain.com",
@@ -29,5 +31,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [mdx(), sitemap()]
+  integrations: [mdx(), sitemap(), playformInline()]
 });
