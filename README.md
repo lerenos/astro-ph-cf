@@ -1,21 +1,31 @@
 # Astro 5 + Tailwind 4 + PostHog + Cloudflare Pages
 
-## Quick Start for Local Development and Deployment via CLI
+## Quick Start
+
+There are 2 install options:
+
+### 1. Via CLI
 `npm create cloudflare@latest -- my-astro-app --framework=astro --template=lerenos/astro-ph-cf`
 
 When prompted...
 
-`What would you like to start with?`
+_What would you like to start with?_
 
 `> Template from a GitHub repo`
 
-`"What's the url of git repo containing the template you'd like to use?"`
+_What's the url of git repo containing the template you'd like to use?_
 
 `lerenos/astro-ph-cf`
 
+_Do you want to deploy your application?_
+
+`> No` (so you can later connect to your GitHub repo)
+
 You can be prompted about logging into Cloudflare and/or Github.
 
-## Deployment via Github and Cloudflare Dashboard
+You'll need to connect GitHub to Cloudflare via Dashboard. [Here is a complete tutorial.](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/)
+
+### 2. Via Github and Cloudflare Dashboard
 1. Go to https://github.com/lerenos/astro-ph-cf
 2. Click on the "Use this Template" button and configure the name and visibility of your new repo
 3. Go to https://dash.cloudflare.com/ > Your Account > + Add (top right of the screen) > Pages
@@ -56,7 +66,7 @@ This is a starter template to meet the following requirements:
 
 To achieve this, we're going to use:
 
-- Posthog - for Analytics and Sending Events to Meta and Google Ads - Goodbye to GA4 👋.
+- [Posthog](https://posthog.com/) - for Analytics and Sending Events to Meta and Google Ads - Goodbye to GA4 👋.
 - Cloudflare Pages - CF Pages is a CI/CD solution, alternative to Vercel/Netlify
 - Cloudflare Zaraz - This is a serverless Edge Service that allows you to add 3rd party scripts to your website, thus substituting the need of using Google Tag Manager (or the expensive sGTM solution). If PostHog works good to send data to Meta and GAds, we're not going to need this for now (but it is cool to have this option on the table). 
 
