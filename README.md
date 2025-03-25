@@ -144,5 +144,12 @@ After this initial commands, I made some customizations in...
 2. Configure the Site Domain on astro.config.mjs
 
 ## Environment variables
-3. SITE_NAME - The site name
-4. PUBLIC_PH_KEY - PostHog Public Key
+SITE_NAME - The site name
+PUBLIC_PH_KEY - PostHog Public Key
+
+## For local development with VSCode
+Go to the command line and run:
+> git clone <your repo address>
+> cd <the folder name>
+> npm i (to install the packages)
+> npm run dev to start the development server
