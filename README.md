@@ -15,11 +15,14 @@ To achieve this, we will use:
 - Cloudflare Pages - CF Pages is a CI/CD solution, alternative to Vercel/Netlify
 - Cloudflare Zaraz - This is a serverless Edge Service that allows you to add 3rd party scripts to your website, thus substituting the need of using Google Tag Manager (or the expensive sGTM solution). If PostHog works good to send data to Meta and GAds, we're not going to need this for now (but it is cool to have this option on the table). 
 
-## Other Techs Here
+## Other Important Techs Here
 - Astro - The framework used to build the website (Not a JS framework, like react or Vue, but a Site Generator framework).
 - TailwindCSS - For styling
 - DaisyUI - A Tailwind Component Library
+
+## Remarkable plugins
 - notion-astro-loader - Notion loader for the Astro Content Layer
+- Playform Inline - inlines your app's critical CSS and lazy-loads the rest.
 
 ## Pricing
 PostHog is free until 1 million events per month.
