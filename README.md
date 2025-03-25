@@ -139,8 +139,10 @@ After this initial commands, I made some customizations in...
 8. Deploy!
 9. Enable Web Analytics at Metrics > Web Analytics (optional)
 
-## Initial Settings (all optional)
-1. Custom domain on the Cloudflare Dashboard
-2. Site Domain on astro.config.mjs
-3. Site name on the .env file
-4. PostHog Public key at the .env file
+## Domain Configuration
+1. Configure the Custom domain on the Cloudflare Dashboard (optional)
+2. Configure the Site Domain on astro.config.mjs
+
+## Environment variables
+3. SITE_NAME - The site name
+4. PUBLIC_PH_KEY - PostHog Public Key
