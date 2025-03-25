@@ -1,13 +1,57 @@
 # Astro 5 + Tailwind 4 + PostHog + Cloudflare Pages
 
+## Quick Start for Local Development and Deployment via CLI
+`npm create cloudflare@latest -- my-astro-app --framework=astro --template=lerenos/astro-ph-cf`
+
+When prompted...
+
+`What would you like to start with?`
+
+`> Template from a GitHub repo`
+
+`"What's the url of git repo containing the template you'd like to use?"`
+
+`lerenos/astro-ph-cf`
+
+You can be prompted about logging into Cloudflare and/or Github.
+
+## Deployment via Github and Cloudflare Dashboard
+1. Go to https://github.com/lerenos/astro-ph-cf
+2. Click on the "Use this Template" button and configure the name and visibility of your new repo
+3. Go to https://dash.cloudflare.com/ > Your Account > + Add (top right of the screen) > Pages
+4. Connect to Git
+5. Choose the repo
+6. Name your project
+7. Framework preset: Astro
+8. Deploy!
+9. Enable Web Analytics at Metrics > Web Analytics (optional)
+10. For local development with VSCode, go to the IDE command line and run:
+
+`git clone <your repo address>`
+
+`cd <the folder name>`
+
+`npm i` to install the packages
+
+`npm run dev` to start the development server
+
+## Domain Configuration
+1. Configure the Custom domain on the Cloudflare Dashboard (optional)
+2. Configure the Site Domain on astro.config.mjs
+
+## Environment variables
+SITE_NAME - The site name
+PUBLIC_PH_KEY - PostHog Public Key
+
+
 ## Motivation
-This is a starter template to meet the following requitements:
+This is a starter template to meet the following requirements:
 
 - A Marketing Website with Landing Pages
-- To run Ads on Google and Meta
-- Perfect (or almost) score on Google Lighthouse
+- Being an excellent site to recieve traffic from Google and Meta Ads
+- Perfect (or almost) score on Google Lighthouse/Page Speed Insights
 - Perfect SEO Metatags and ld+json
-- Ability to make a blog, in a second moment.
+- Being able to exapand the website and make a blog with thousands of pages.
 
 To achieve this, we will use:
 
@@ -126,30 +170,3 @@ After this initial commands, I made some customizations in...
 - [Tailwind Color Pallete - A really nice class picker](https://tailkit.com/tools/tailwind-color-palette)
 - [Tailwind Color Pallete - Official Docs](https://tailwindcss.com/docs/customizing-colors)
 
-
-
-## Step By Step
-1. Go to https://github.com/lerenos/astro-ph-cf
-2. Click on the "Use this Template" button and configure the name and visibility of the new repo
-3. Go to https://dash.cloudflare.com/ > Your Account > + Add (top right of the screen) > Pages
-4. Connect to Git
-5. Choose the repo
-6. Name your project
-7. Framework preset: Astro
-8. Deploy!
-9. Enable Web Analytics at Metrics > Web Analytics (optional)
-
-## Domain Configuration
-1. Configure the Custom domain on the Cloudflare Dashboard (optional)
-2. Configure the Site Domain on astro.config.mjs
-
-## Environment variables
-SITE_NAME - The site name
-PUBLIC_PH_KEY - PostHog Public Key
-
-## For local development with VSCode
-Go to the command line and run:
-> git clone <your repo address>
-> cd <the folder name>
-> npm i (to install the packages)
-> npm run dev to start the development server
