@@ -41,6 +41,7 @@ You can be prompted about logging into Cloudflare and/or Github.
 
 ## Environment variables
 SITE_NAME - The site name
+
 PUBLIC_PH_KEY - PostHog Public Key
 
 
@@ -53,16 +54,16 @@ This is a starter template to meet the following requirements:
 - Perfect SEO Metatags and ld+json
 - Being able to exapand the website and make a blog with thousands of pages.
 
-To achieve this, we will use:
+To achieve this, we're going to use:
 
 - Posthog - for Analytics and Sending Events to Meta and Google Ads - Goodbye to GA4 👋.
 - Cloudflare Pages - CF Pages is a CI/CD solution, alternative to Vercel/Netlify
 - Cloudflare Zaraz - This is a serverless Edge Service that allows you to add 3rd party scripts to your website, thus substituting the need of using Google Tag Manager (or the expensive sGTM solution). If PostHog works good to send data to Meta and GAds, we're not going to need this for now (but it is cool to have this option on the table). 
 
 ## Other Important Techs Here
-- Astro - The framework used to build the website (Not a JS framework, like react or Vue, but a Site Generator framework).
-- TailwindCSS - For styling
-- DaisyUI - A Tailwind Component Library
+- [Astro](https://astro.build/) - The framework used to build the website (Not a JS framework, like react or Vue, but a Site Generator framework).
+- [TailwindCSS](https://tailwindcss.com/) - For styling
+- [DaisyUI](https://daisyui.com/) - A Tailwind Component Library
 
 ## Remarkable plugins
 - notion-astro-loader - Notion loader for the Astro Content Layer
