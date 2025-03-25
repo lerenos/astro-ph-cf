@@ -125,3 +125,22 @@ After this initial commands, I made some customizations in...
 - [Adobe Color Wheel](https://color.adobe.com/create/color-wheel)
 - [Tailwind Color Pallete - A really nice class picker](https://tailkit.com/tools/tailwind-color-palette)
 - [Tailwind Color Pallete - Official Docs](https://tailwindcss.com/docs/customizing-colors)
+
+
+
+## Step By Step
+1. Go to https://github.com/lerenos/astro-ph-cf
+2. Click on the "Use this Template" button and configure the name and visibility of the new repo
+3. Go to https://dash.cloudflare.com/ > Your Account > + Add (top right of the screen) > Pages
+4. Connect to Git
+5. Choose the repo
+6. Name your project
+7. Framework preset: Astro
+8. Deploy!
+9. Enable Web Analytics at Metrics > Web Analytics (optional)
+
+## Initial Settings (all optional)
+1. Custom domain on the Cloudflare Dashboard
+2. Site Domain on astro.config.mjs
+3. Site name on the .env file
+4. PostHog Public key at the .env file
