@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "check": "astro check",
-    "build": "astro build",
+    "build": "astro build && node clean-html.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
