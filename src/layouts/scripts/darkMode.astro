@@ -20,9 +20,9 @@ function setDarkMode() {
 function respectOSPreference() {
     localStorage.removeItem("theme");
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    document.documentElement.dataset['theme'] = "dark";
+        document.documentElement.dataset['theme'] = "dark";
     } else {
-    delete document.documentElement.dataset['theme'];
+        delete document.documentElement.dataset['theme'];
     }
 }
 </script>

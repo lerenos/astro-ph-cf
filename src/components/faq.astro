@@ -1,10 +1,20 @@
 ---
-let faq = [
-    {q: "Question?", a: "Answer"}
+interface Props {
+  /**
+   * Array of objects with question and answer
+   */
+  data: Array<{q: string, a: string}>
+}
+
+let sampleFaq = [
+    {q: "Question?", a: "Answer"},
+    {q: "Another Question?", a: "Another Answer"}
 ]
 
+const { data = sampleFaq } = Astro.props
+
 let faqSchemaArray = []
-faq.map(item =>
+data.map(item =>
   faqSchemaArray.push({
     "@type": "Question",
     "name": item.q,
@@ -20,7 +30,5 @@ let faqSchema = {
   "mainEntity": faqSchemaArray
 }
 
-
-const { data = faq } = Astro.props
 ---
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

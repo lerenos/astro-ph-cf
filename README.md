@@ -1,4 +1,4 @@
-# Astro 5 + Tailwind 4 + PostHog + Cloudflare Pages 
+# Astro 5 + Tailwind 4 + PostHog + Cloudflare Pages
 
 ## Motivation
 This is a starter template to meet the following requitements:
@@ -17,9 +17,9 @@ To achieve this, we will use:
 
 ## Other Techs Here
 - Astro - The framework used to build the website (Not a JS framework, like react or Vue, but a Site Generator framework).
-- notion-astro-loader - Notion loader for the Astro Content Layer
 - TailwindCSS - For styling
 - DaisyUI - A Tailwind Component Library
+- notion-astro-loader - Notion loader for the Astro Content Layer
 
 ## Pricing
 PostHog is free until 1 million events per month.
@@ -110,9 +110,9 @@ After this initial commands, I made some customizations in...
 
 - tsconfig.json (set the "@/*" import alias, etc)
 - Created the Head component with many SEO metatags
-- Middleware for Posthog reverse proxy
-- Posthog script component
 - Tailwind: modifications in base.css, such as the DaisyUI installation and dark theme configuration. 
+- Middleware for Posthog reverse proxy
+- Head Scripts: Posthog, Dark Mode, Forward Query Strings
 
 ## Cool Resources
 

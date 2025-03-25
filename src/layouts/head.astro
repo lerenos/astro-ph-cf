@@ -2,6 +2,7 @@
 import '@/styles/base.css'
 import Posthog from "./scripts/posthog.astro";
 import DarkMode from './scripts/darkMode.astro';
+import ForwardQueryString from './scripts/forwardQueryString.astro';
 
 const siteName = import.meta.env.SITE_NAME
 
@@ -62,31 +63,6 @@ if (noindex){
 <meta name="generator" content={Astro.generator} />
 <!-- <link rel="sitemap" href="/sitemap-index.xml"> -->
 
-<script>
-//Script to forward query strings to all the links on the page
-document.addEventListener('DOMContentLoaded', () =>{
-  if (window.location.search){
-    const newParams = new URLSearchParams(window.location.search)
-    document.querySelectorAll("a").forEach(item => {
-
-        let href = item.href
-        let hashLink = item.getAttribute("href")?.startsWith("#")
-        
-      if (href && !hashLink){
-          
-          let link = new URL(href)
-          const isInternal = link.origin === window.location.origin
-          
-          newParams.forEach((value, key) => {link.searchParams.set(key,value)})
-          let newFullURL =  link.toString()
-          
-          item.href = isInternal ? newFullURL.replace(window.location.origin,"") : newFullURL
-        }
-    })
-}
-})
-</script>
-
+<ForwardQueryString />
 <Posthog />
-
 <DarkMode />

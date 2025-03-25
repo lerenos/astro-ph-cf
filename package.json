@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/cloudflare": "^12.2.1",
-    "@astrojs/mdx": "^4.0.8",
-    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/cloudflare": "^12.3.0",
+    "@astrojs/mdx": "^4.2.1",
+    "@astrojs/sitemap": "^3.3.0",
     "@playform/inline": "^0.1.1",
     "@tailwindcss/vite": "^4.0.6",
-    "astro": "^5.2.1",
+    "astro": "^5.5.4",
     "notion-astro-loader": "^0.3.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.2"
