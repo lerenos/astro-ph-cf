@@ -17,6 +17,8 @@
     "@playform/inline": "^0.1.1",
     "@tailwindcss/vite": "^4.0.6",
     "astro": "^5.5.4",
+    "globby": "^14.1.0",
+    "html-minifier-terser": "^7.2.0",
     "notion-astro-loader": "^0.3.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.2"
